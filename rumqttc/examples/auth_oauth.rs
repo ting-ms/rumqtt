@@ -8,11 +8,11 @@ use tokio_rustls::rustls::ClientConfig;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<(), Box<dyn Error>> {
-    let pubsub_access_token = "";
+    let pubsub_access_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkwxS2ZLRklfam5YYndXYzIyeFp4dzFzVUhIMCIsImtpZCI6IkwxS2ZLRklfam5YYndXYzIyeFp4dzFzVUhIMCJ9.eyJhdWQiOiJodHRwczovL2V2ZW50Z3JpZC5henVyZS5uZXQiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC84MWQ4MDMwMC1kNTEyLTQyNDItYjYwNC01ZTc0NDg3OWNjMmYvIiwiaWF0IjoxNzE2ODc5MTQ5LCJuYmYiOjE3MTY4NzkxNDksImV4cCI6MTcxNjg4MzA0OSwiYWlvIjoiRTJOZ1lOamkwYzBhL3Fqay91bU9ZMTQrdG0rekFRPT0iLCJhcHBpZCI6ImE1NzhmZjJmLTFjZTgtNGZhYy05ZWVkLTZiZjNlYWJjMzYyNyIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0LzgxZDgwMzAwLWQ1MTItNDI0Mi1iNjA0LTVlNzQ0ODc5Y2MyZi8iLCJvaWQiOiJhY2JjOTMwMy0xYzBkLTRkMjItOTZmZC02ZmFlNzliMWVlMDgiLCJyaCI6IjAuQVQ0QUFBUFlnUkxWUWtLMkJGNTBTSG5NTDNnS1BJTGdYVVZFcF9YQzlDMTl5SnMtQUFBLiIsInN1YiI6ImFjYmM5MzAzLTFjMGQtNGQyMi05NmZkLTZmYWU3OWIxZWUwOCIsInRpZCI6IjgxZDgwMzAwLWQ1MTItNDI0Mi1iNjA0LTVlNzQ0ODc5Y2MyZiIsInV0aSI6ImZZdE1WSzZuT1VlY0hyNWdLRnV5QUEiLCJ2ZXIiOiIxLjAifQ.jl5WfEZJY5Bi9a1QSbtyocoCp9zv-4h9cKJMhO-hGioQODiIgehtYryKJxjlR1bSeg1W6TkzyIDDJGovKGg3YCofiJ5TF_8jBpM6ZiY7U8wbUndg5ziKvXHCPbhqGkfF3TMhDHnrPPZ3gO_YWO0S7SdomzNPcmzN1f14qCywEQKZ-bI8qMhMJDelMU3OP1s5JBrkuY-Mfh9X8QE4rd0gXYtzyurVu_LN0NM1BZs5ZDUqGQFsW9OW6EoRQvRA04XLYWVuRwYh1rRABLrjZGNFy1OOz7YJJljDMCL_qjPFEVi9k_4Gr4pTGBlr0GiVPXNlKulAV-Z8jFLDeDzzc9gKJg";
 
     let mut mqttoptions = MqttOptions::new(
         "client1-session1",
-        "namespacetest.eastus-1.ts.eventgrid.azure.net",
+        "auth-test.eastus-1.ts.eventgrid.azure.net",
         8883,
     );
     mqttoptions.set_authentication_method(Some("OAUTH2-JWT".to_string()));
